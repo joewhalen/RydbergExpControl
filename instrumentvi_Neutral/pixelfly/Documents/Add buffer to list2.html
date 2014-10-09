@@ -1,0 +1,220 @@
+<HTML>
+<HEAD>
+<TITLE>Add buffer to list.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="Add buffer to list.vi"></A><H2>Add buffer to list.vi</H2>
+<P>Places a buffer in the acquisition queue. If the specified buffer 
+is already in the queue, an error is generated. The queue can 
+hold up to 32 buffers. Each subsequent call to this VI adds a 
+buffer to the end of the queue. Once the data has been transferred 
+from the camera to the buffer it is removed from the queue, and 
+the next data transfer will use the next buffer in the queue.</P>
+<P><IMG SRC="Add buffer to list2p.png" ALT="Add buffer to list.vi"></P>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cclst.png" ALT="cclst"></P>
+</TD>
+<TD>
+<B>error in (no error)</B> <P>error in describes an error that you want to check. If you leave 
+error in unwired, this VI checks error code for errors.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P>The status boolean is either TRUE (cross) for an error, or FALSE 
+(checkmark) for no error or a warning.</P>
+<P></P>
+<P>The pop-up option Explain Error (or Explain Warning) gives more 
+information about the error displayed.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P>The code input identifies the error or warning reported.</P>
+<P></P>
+<P>The pop-up option Explain Error (or Explain Warning) gives more 
+information about the error displayed.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P>The source string describes the origin of the error or warning 
+reported.</P>
+<P></P>
+<P>The pop-up option Explain Error (or Explain Warning) gives more 
+information about the error displayed.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Handle in</B> <P>An integer assigned by the PixelFly driver to identify which camera 
+is referenced by this VI call. Up to four cameras can be supported.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Buffer in</B> <P>This buffer number must be one of the numbers assigned by the 
+&quot;allocate buffer&quot; VI. This will select which of the 
+assigned buffers to de-allocate.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>size</B> <P>Number of bytes to send from the camera to the buffer. 12 bit 
+data is sent as 2 bytes. The number of bytes must be equal to 
+or less than the size of the whole image in bytes. If the requested 
+number is larger than the camera size, a timeout error will occur. 
+Size must be larger than 4096 bytes.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>offset</B> <P>Specifies an offset into the buffer where the data transfer is 
+to begin. If the image size is smaller than the buffer size, &quot;offset&quot; 
+can be used to store multiple small images in the buffer.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>data</B> <P>This input is reserved for the use of future driver functionality. 
+Do not change the value from the default setting.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Error out</B> <P>Error number assigned by the PixelFly driver. Error codes are 
+explained in the &quot;error out&quot; cluster.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="iclst.png" ALT="iclst"></P>
+</TD>
+<TD>
+<B>error out</B> <P>error out is a cluster containing the same information as in status 
+out, code out, and source out. It has the same structure as error 
+in.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P>The status boolean is either TRUE (cross) for an error, or FALSE 
+(checkmark) for no error or a warning.</P>
+<P></P>
+<P>The pop-up option Explain Error (or Explain Warning) gives more 
+information about the error displayed.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P>The code input identifies the error or warning reported.</P>
+<P></P>
+<P>The pop-up option Explain Error (or Explain Warning) gives more 
+information about the error displayed.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P>The source string describes the origin of the error or warning 
+reported.</P>
+<P></P>
+<P>The pop-up option Explain Error (or Explain Warning) gives more 
+information about the error displayed.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Handle out</B> <P>An integer assigned by the PixelFly driver to identify which camera 
+is referenced by this VI call. Up to four cameras can be supported. 
+Calling this VI will not change the value of &quot;Handle out&quot; 
+ from the value specified by  &quot;handle in&quot;.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Buffer number</B> <P>Outputs the number of the buffer that was added to the list.</P>
+</TD>
+</TR>
+</Table>
+</BODY>
+</HTML>

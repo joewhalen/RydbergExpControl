@@ -1,0 +1,15 @@
+TKTDS2XX Horizontal.vi
+  Front Panel
+    - Position (0.000) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+    - Timebase (15:500us) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+TKTDS2XX Trigger.vi
+  Front Panel
+    - Coupling (0:AC) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+    - Mode (0:Auto) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+    - Source (0:Channel 1) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+TKTDS2XX Vertical.vi
+  Front Panel
+    - Probe Attenuation(1:10x) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+    - Position (0.000) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+    - Volts/Div (2.000) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.
+    - Coupling (0:DC) uses data range coercion, which now only applies to data entry; values will not be coerced when passed to subVIs.  To coerce passed values,  use the In Range and Coerce function.

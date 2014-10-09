@@ -1,0 +1,1 @@
+wdreg_gui -inf wd_virtual.inf reload

@@ -1,0 +1,375 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+<link rel="alternate" type="application/rss+xml" title="Converting Visual Basic ActiveX Examples to Equivalent LabVIEW" href="http://zone.ni.com/nirss/nirssnews?nistype=rss&q=url:http://zone.ni.com/devzone/cda/tut/p/id/2734&filter=%2Btaxonomy:%22Developer%20Zone%22&sortby=default&sortorder=ascending&nresults=1">
+<title>Converting Visual Basic ActiveX Examples to Equivalent LabVIEW- Developer Zone - National Instruments</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="Date" scheme="iso8601" content="2006-09-12">
+<meta name="ContentClass" content="Technical">
+<meta name="ContentType" content="Tutorial">
+<meta name="Language" scheme="rfc3066" content="en">
+<meta name="Keywords" content="">
+<meta name="ShortTitle" content="Converting Visual Basic ActiveX Examples to Equivalent LabVIEW">
+<meta name="DocType" content="NI_Supported">
+<meta name="ProductCategories" content="">
+
+<meta name="documentid" content="3D578304D756D010VGNVCM200000A90AA482RCRD">
+
+<meta name="section" content="DevZone"> 
+<meta name="nigen1" content=""> <!-- industry -->
+<meta name="nigen2" content="">  <!-- application -->
+<meta name="nigen3" content="ActiveX"> <!-- developmentTopic -->
+<meta name="nigen4" content=""> <!-- Technology -->
+<meta name="nigen5" content=""> <!-- Hardware Family -->
+<meta name="nigen6" content=""> <!-- Application Software -->
+<meta name="nigen10" content=""> <!-- All Product categories (For Tutorials it nigen10 =  ProductCategories  -->
+
+
+<!-- JavaScript used in includeLanguageMenu.jsp & includeWarningBox. -->
+        <script language="javascript">
+            function changeLocale(locale) {
+                if(locale == '') return false;
+                if(locale == 'globalGateway') {
+                    location.href='http://zone.ni.com/nigwy/cds/globalgateway/p/lang/en?rtrn=http://zone.ni.com/devzone/cda/tut/p/id/2734';
+                } else {
+                    location.href='http://zone.ni.com/nigwy/cds/setlocale/p/locale/' + locale + '?rtrn=http://zone.ni.com/devzone/cda/tut/p/id/2734';
+                }
+            }
+        </script>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/global/us/zone.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="/css/global/us/zoneprint.css" media="print">
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+<script language="javascript" type="text/javascript" src="/javascript/global/resistance_is_futile.js"></script>
+</head>
+<body>
+
+<a name="top"></a>
+<div id="wrapper">
+	<a href="http://www.ni.com"><img src="/images/global/us/logo.gif" width="157" height="64" border="0" alt="NI Home" id="logo"></a>
+
+
+
+
+
+
+
+
+	<div id="search" class="noindex">
+		<!--NOTES_FORM_TAG1-->
+		<form name="search" action="http://search.ni.com/nisearch/jsp/forward.jsp"><a href="http://sine.ni.com/apps/utf8/nios.store?action=view_cart"><img src="/images/global/us/cart.gif" alt="view cart" border="0" width="12" height="8"></a> <a href="http://sine.ni.com/apps/utf8/nios.store?action=view_cart">view cart</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.ni.com/help/">help</a>&nbsp;&nbsp;|&nbsp;&nbsp;search&nbsp;<select name="scope" class="fineprint"><option value="DZone" SELECTED>NI Developer Zone<option value="site">Entire Site</select> <input type="text" name="query" size="16" maxlength="254">&nbsp;<input type="image" src="/images/buttons/us/search_go.gif" class="topalign"></form>
+		<!--NOTES_FORM_TAG2-->
+	</div>
+
+
+	<div class="noindex">
+	<map name="globalnav"> 
+	<area shape="rect" alt="Academic" coords="557,0,627,20" href="http://www.ni.com/academic/"> 
+	<area shape="rect" alt="Company" coords="684,0,751,20" href="http://www.ni.com/company/"> 
+	<area shape="rect" alt="Events" coords="629,0,682,20" href="http://www.ni.com/events/"> 
+	<area shape="rect" alt="NI Developer Zone" coords="441,0,555,20" href="http://zone.ni.com/"> 
+	<area shape="rect" alt="Support" coords="378,0,439,20" href="http://www.ni.com/support/"> 
+	<area shape="rect" alt="Solutions" coords="307,0,376,20" href="http://www.ni.com/solutions/"> 
+	<area shape="rect" alt="Products & Services" coords="180,0,305,20" href="http://www.ni.com/products/"> 
+	<area shape="rect" alt="Contact NI" coords="91,0,179,20" href="http://sine.ni.com/apps/utf8/nicc.call_me"> 
+	<area shape="rect" alt="MyNI" coords="0,0,90,20" href="http://my.ni.com/myni/myni"> 
+	</map>
+	</div>
+	<div id="sitenavigation" class="noindex"><img src="/images/buttons/us/devzone1_on.gif" width="752" height="20" border="0" alt="" usemap="#globalnav" /></div>
+
+
+
+
+
+
+<div class="noindex">
+<div id="identity">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	  <tr valign="middle">
+		  <td id="devzone"><a href="http://zone.ni.com/"><img src="/images/devzone/us/headers/logo.gif" width="180" height="25" alt="" border="0"></a></td>
+			<td id="whatsit"><a href="http://zone.ni.com/devzone/cda/tut/p/id/3802">What is Developer Zone?</a></td>
+			<td id="locale">
+        <!-- Begin Language Dropdown -->
+
+        <div id="localeselector">        <a href="" onclick="changeLocale('globalGateway');return false;"><strong>United States</strong></a></div>
+</td>
+	  </tr>
+	</table>
+</div>
+</div>
+
+
+
+	<div id="bodycontainer" class="document">
+<div class="noindex">
+		<div id="resources">
+			<div class="docbox">
+				<p>
+				<strong>Document Type</strong>: Tutorial<br />
+				<strong>NI Supported</strong>: Yes <br />
+				</p>
+			</div>
+			<div id="flakes">
+
+	            
+                  
+                  
+                  
+                  
+			
+			
+
+
+
+
+
+				<h3>Feedback</h3>
+				<div class="docbox">
+					<form action="http://zone.ni.com/apps/utf8/nidz_ratings.submit_rating" method="GET" name="suppfeed">
+     					<input type="hidden" name="p_guid" value="3D578304D756D010VGNVCM200000A90AA482RCRD">
+				    <input type="hidden" name="p_url" value="http://zone.ni.com/devzone/cda/tut/p/id/2734?submitted=yes">
+			     <input type="hidden" name="p_rating_type" value="TUT">
+
+					<label>Rate this document</label>
+					<select name="p_rank">
+					<option value="" selected>Select a Rating</option>
+					<option value="1">1- Poor</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5- Excellent</option>
+					</select>
+					<br />
+					<label>Answered Your Question?</label>
+					<input type="radio" name="p_answer" value="yes"> Yes <input type="radio" name="p_answer" value="no"> No<br />
+					<br />
+<a href="javascript:document.forms.suppfeed.submit()"><img src="/images/buttons/us/submit.gif" border="0"></a>
+					</form>
+				</div>
+
+
+
+				<br />
+				<div class="docbox">
+					<p><img src="/images/general/neutral/delicious.gif" width="16" height="16" alt="" border="0"> <a href="http://del.icio.us/post?url=http://zone.ni.com/devzone/cda/tut/p/id/2734&amp;title=Converting Visual Basic ActiveX Examples to Equivalent LabVIEW">Add to Del.icio.us</a></p>
+					<p><img src="/images/general/neutral/digg.gif" width="16" height="16" alt="" border="0"> <a href="http://digg.com/submit?phase=2&amp;url=http://zone.ni.com/devzone/cda/tut/p/id/2734">DIGG this!</a></p>
+				</div>
+
+				
+				<h2>Related Categories</h2>
+				<div class="fnavbox">
+					
+					
+					<p><strong>Development Topic</strong></p>
+					<ul><li><a href = "http://zone.ni.com/devzone/fn/p/sn/n24:ProgrammingFundamentals">Programming Fundamentals</a><ul><li><a href = "http://zone.ni.com/devzone/fn/p/sn/n24:ProgrammingFundamentals.CommunicationNetworking">Communication/Networking</a><ul><li><a href = "http://zone.ni.com/devzone/fn/p/sn/n24:ProgrammingFundamentals.CommunicationNetworking.CommunicatingWithExternalApplications">Communicating with External Applications</a><ul><li><a href = "http://zone.ni.com/devzone/fn/p/sn/n24:ProgrammingFundamentals.CommunicationNetworking.CommunicatingWithExternalApplications.ActiveX">ActiveX</a><ul></ul></li></ul></li></ul></li></ul></li></ul>
+								
+								
+					
+					
+				</div>
+				
+
+                	
+			
+                  
+                  
+			
+			
+
+
+			<h2>Related Links - Developer Zone</h2>
+				<div class="fnavbox">
+				<ul>
+				<li><a href='http://zone.ni.com/devzone/cda/tut/p/id/3520'>Integrating Microsoft Excel with National Instruments Software- Developer Zone - National</a></li><br/><li><a href='http://zone.ni.com/devzone/cda/tut/p/id/2828'>LabVIEW and Visual Basic- Developer Zone - National Instruments</a></li><br/>
+				</ul>
+				</div>
+
+
+
+
+
+
+                
+			
+                  
+                  
+			
+			
+
+
+			<h2>Related Links - Products and Services</h2>
+				<div class="fnavbox">
+				<ul>
+				<li><a href='http://sine.ni.com/nips/cds/view/p/lang/en/nid/1439'>NI PID Toolkit for Visual Basic - <cache:include xmlns:cache="urn:cache"</a></li><br/><li><a href='http://sine.ni.com/nips/cds/view/p/lang/en/nid/202291'>NI-DAQmx Driver Software - Products and Services - National Instruments</a></li><br/>
+				</ul>
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+</div>
+
+		<div id="primarycontentcontainer">
+<div class="noindex">
+			<h1>Converting Visual Basic ActiveX Examples to Equivalent LabVIEW</h1>
+			<div class="docdetails">
+
+				
+	                  
+	                  
+				
+				
+
+
+
+<div class="ratings">2 ratings | <strong>5.00</strong> out of 5</div>
+
+
+
+				<a href="http://zone.ni.com/nirss/nirssnews?nistype=rss&q=url:http://zone.ni.com/devzone/cda/tut/p/id/2734&filter=%2Btaxonomy:%22Developer%20Zone%22&sortby=default&sortorder=ascending&nresults=1"><img src="/images/icons/us/rss.gif" width="30" height="16" alt="" border="0" class="middlealign"></a> | <a href="javascript:window.print()"><img src="/images/global/us/icons/print.gif" width="18" height="13" alt="" border="0" class="bottomalign"> Print Document</a> 
+
+				
+				
+			</div>
+</div>
+			<div id="pagearea">
+<div class="noindex">
+			
+			<h3>Table of Contents</h3><ol><li><a href="#0">Introduction</a></li><li><a href="#1">Creating an Object Reference</a></li><li><a href="#2">Using Object Properties and Methods</a></li><li><a href="#3">Releasing an Object</a></li><li><a href="#4">Navigating Object Models</a></li><li><a href="#5">Navigating the Object Hierarchy</a></li><li><a href="#6">Converting an Example</a></li></ol>
+
+
+				
+</div>
+
+				
+				<a name = "0"></a><h2>Introduction</a><br></h2> Many ActiveX examples have been written in a variety of programming languages to demonstrate the functionality of various ActiveX components. These existing examples, while extremely useful, are sometimes difficult to translate into corresponding LabVIEW examples.<br> <br> Regardless of the development language you use, you must complete the following steps to use objects provided by ActiveX components: <ol type="1"> <li>Create a reference to the object you want to use. How you create the reference depends on the type of object and if the ActiveX component supplies a type library. <li> Write code using the properties, methods, and events for the object. <li>Release the object when you are finished using it. </ol> <br> This document explains the correspondence between Visual Basic ActiveX calls and LabVIEW. For more information about using ActiveX in LabVIEW, refer to <i>ActiveX and LabVIEW</i> (linked below). <blockquote><span class="title3">See Also: </span><br><a href="http://zone.ni.com/devzone/cda/tut/p/id/2983">ActiveX and LabVIEW</a><br></blockquote> <a name = "1"></a><h2>Creating an Object Reference</a><br></h2> <br> Before you can use the properties, methods, and events for an ActiveX object in an application, you must open an object reference to an automation server. How you assign an object reference depends on the following factors: <ul> <li type="disc">The ActiveX component supplies a type library--The type library contains definitions of all the objects the component provides, including definitions for all available properties, methods, and events. <li type="disc">Whether the object is a top-level, externally creatable object, or a dependent object--You can assign a reference to an externally created object directly, while references to dependent objects are assigned indirectly. An example of an externally creatable object would be the Application object for Excel. An example of a dependent object is the Workbooks object, which is dependent on the creation of an Application object.</ul> <br> If an object is externally creatable, you can assign an object reference to a variable in Visual Basic by using the New keyword, CreateObject, or GetObject in a Set statement from outside the component. If the object is a dependent object, you assign an object reference by using a method of a higher-level object in a Set statement.<br> <br> In LabVIEW you use the Automation Open function to create the reference to an externally creatable object. To assign a dependent object reference, use a method of a higher-level object just as you would in Visual Basic.<br> <br> <b>Note:</b> To view externally creatable objects in LabVIEW, right-click the Automation Open function, select <b>Select ActiveX Class»Browse</b> from the shortcut menu to display the <b>Select Object From Type Library</b> dialog box, and place a checkmark in the <b>Show</b><i> </i><b>Creatable Objects Only</b> checkbox. Otherwise, the dialog box also displays all dependent objects as well.<br> <br> The following example demonstrates opening externally creatable reference to Excel using Visual Basic and LabVIEW.<br> <br> <table border="1"> <tr valign="top"><td width="326"><div align="center"><b><u>Visual Basic</u></b></div></td><td width="312"><div align="center"><b><u>LabVIEW</u></b></div></td></tr> <tr valign="top"><td width="326">Dim XlApp As Excel.Application<br> Set XlApp = New Excel.Application<br> <br> Or<br> <br> Dim XlApp<br> Set XlApp = CreateObject(&quot;Excel.Application&quot;)</td><td width="312"><img src="/cms/images/devzone/tut/c/3d578304165.gif" width="167" height="100" alt=""></td></tr> </table> <b> </b><br> The GetObject keyword is used in the same manner as CreateObject, except if a reference already exists GetObject returns the existing reference. By default, LabVIEW returns a existing reference. If a reference does not exist, LabVIEW opens a new one. To open a new reference automatically, set the <b>open new instance</b> input of the Automation Open function to TRUE, as is shown in the previous example.<br> <br> In comparison, the following example demonstrates using a dependent object reference in Visual Basic and LabVIEW. A LabVIEW VirtualInstrument is a dependent object of the Application reference. You must create the Application object first and then create a VirtualInstrument from that object.<br> <br> <table border="1"> <tr valign="top"><td width="326"><div align="center"><b><u>Visual Basic</u></b></div></td><td width="312"><div align="center"><b><u>LabVIEW</u></b></div></td></tr> <tr valign="top"><td width="326">Dim MyApp As LabVIEW.Application<br> Dim MyVI As LabVIEW.VirtualInstrument <ul></ul> Set MyApp = New LabVIEW.Application<br> Set MyVI = MyApp.GetVIReference(Path) <ul></ul> </td><td width="312"> <ul><img src="/cms/images/devzone/tut/c/3d578304166.gif" width="250" height="137" alt=""></ul> </td></tr> </table> <br> After you have an open reference to the object, you can use its available properties and methods. <a name = "2"></a><h2>Using Object Properties and Methods</a><br></h2> <br> After you create an object reference, you can use the reference to manipulate the properties and methods of the object. You also can make your application respond to object events.<br> <br> In Visual Basic you use the <i>object.property</i> syntax to set and return property values or the <i>object.method</i> syntax to use methods on the object. The following example sets the Caption property of the Excel Application object:<br> <br> Dim xlApp As Excel.Application<br> Set xlApp = New Excel.Application<br> xlApp.Caption = &quot;MyFirstObject&quot;<br> <br> To create the preceding example in LabVIEW, wire an Application reference to a Property Node, right-click the Property Node, select <b>Select Property</b> from the shortcut menu, and select the Caption property from the list of available properties for the object.<br> <br> After you select the Caption property, wire a string constant containing the caption text to the input of the Caption property, as shown in the following example:<br> <br> <img src="/cms/images/devzone/tut/c/3d578304167.gif" width="186" height="72" alt=""><br> To use an object method, wire an Application reference to an Invoke Node, right-click the Invoke Node, select <b>Select Method</b> from the shortcut menu, and select a method from the list of available methods for the object. The following example uses the Save method for the Application object:<br> <br> <img src="/cms/images/devzone/tut/c/3d578304168.gif" width="191" height="66" alt=""> <a name = "3"></a><h2>Releasing an Object</a><br></h2> <br> When you finish using an object, you should clear any references to the object to release the object from memory and prevent a memory leak. <br> <br> In Visual Basic, you set an object variable to Nothing to release the object from memory. The following example sets the acApp object to Nothing, thus disposing of the reference to the object and removing it from memory:<br> <br> Dim acApp As Access.Application<br> Set acApp = New Access.Application<br> MsgBox acApp.SysCmd(acSysCmdAccessVer)<br> Set acApp = Nothing<br> <br> Be careful to set all object references to Nothing when finished, even for dependent objects, as shown in the following example:<br> <br> Dim xlApp As Excel.Application<br> Dim xlBook As Excel.Workbook<br> Set xlApp = New Excel.Application<br> Set xlBook = xlApp.Workbooks.Add<br> Set xlApp = Nothing <br> Set xlBook = Nothing 'Now all the references are cleared.<br> <br> You must also dispose of object references In LabVIEW. Use the Close Reference function to dispose of object references. If multiple references are open, close them when you're finished using them. Refer to the <i>Converting an Example</i> for an example of disposing of object references. <a name = "4"></a><h2>Navigating Object Models</a><br></h2> <br> After you understand how to use objects provided by components, you can use any object that a component exposes to you. Components can range from a simple code component or ActiveX control to large components, such as LabVIEW or Microsoft Excel, which expose many objects.<br> <br> Each object exists in the object hierarchy of the component, and you can access the objects in two ways: <ul> <li type="disc">Directly if the object is externally creatable <li type="disc">Indirectly if the object is a dependent object--You can get a reference to it from another object higher in the hierarchy. </ul> In LabVIEW, use the <b>Select Object From Type Library</b> dialog box to navigate an object hierarchy. Right-click the Automation Open function and select <b>Select ActiveX Class»Browse</b> from the shortcut menu to display this dialog box. The dialog box displays all objects available in each component, as shown in the following figure.<br> <br> <img src="/cms/images/devzone/tut/c/3d578304169.gif" width="396" height="323" alt=""><br> <br> The dialog box displays creatable objects only when you place a checkmark in the <b>Show Creatable Objects Only</b> checkbox. Creatable objects are designated by a blue dot preceding their names, as shown in the following figure.<br> <br> <img src="/cms/images/devzone/tut/c/3d578304170.gif" width="396" height="323" alt=""> <a name = "5"></a><h2>Navigating the Object Hierarchy</a><br></h2> <br> Some objects have very simple hierarchies. For example, LabVIEW has the externally creatable Application object and the dependent VirtualInstrument object, as shown in the following figure.<br> <br> <img src="/cms/images/devzone/tut/c/3d578304171.gif" width="219" height="64" alt=""><br> <br> By comparison, Excel has a complex hierarchy composed of over 100 objects. The following figure shows a small segment of that hierarchy. <br> <br> <img src="/cms/images/devzone/tut/c/3d578304172.gif" width="424" height="221" alt=""><br> For more information about component object hierarchies, refer to the documentation for that component. For example, LabVIEW and Microsoft Excel include component hierarchies and descriptions of objects and their associated properties, methods, and events. <a name = "6"></a><h2>Converting an Example</a><br></h2> <br> The following example converts a Visual Basic example that uses the Excel automation server into a LabVIEW application. This example includes externally creatable objects and indirect dependent objects and uses object methods and properties. The application takes two values entered into the automation client (Visual Basic or LabVIEW), passes them to cells in Excel, creates a formula to add them in Excel, and then saves the worksheet to disk.<br> <br> Private Sub Command1_Click()<br> 'Declare object variables for Microsoft Excel,<br> 'application workbook, and worksheet objects.<br> <br> Dim xlApp As Excel.Application<br> Dim xlBook As Excel.Workbook<br> Dim xlSheet As Excel.Worksheet<br> <br> 'Assign object references to the variables. Use<br> 'Add methods to create new workbook and worksheet<br> 'objects.<br> <br> Set xlApp = New Excel.Application<br> Set xlBook = xlApp.Workbooks.Add<br> Set xlSheet = xlBook.Worksheets.Add<br> <br> 'Assign the values entered in the text boxes to<br> 'Microsoft Excel cells.<br> <br> xlSheet.Cells(1, 1).Value = Text1.Text<br> xlSheet.Cells(2, 1).Value = Text2.Text<br> <br> 'Use the Formula method to add the values in<br> 'Microsoft Excel.<br> <br> xlSheet.Cells(3, 1).Formula = &quot;=R1C1 + R2C1&quot;<br> Text3.Text = xlSheet.Cells(3, 1)<br> <br> 'Save the Worksheet.<br> <br> xlSheet.SaveAs &quot;c:\Temp.xls&quot;<br> <br> 'Close the Workbook<br> <br> xlBook.Close<br> <br> 'Close Microsoft Excel with the Quit method.<br> <br> xlApp.Quit<br> <br> 'Release the objects.<br> <br> Set xlApp = Nothing<br> Set xlBook = Nothing<br> Set xlSheet = Nothing<br> <br> End Sub<br> <br> <br> The following block diagram implements the same application as a LabVIEW VI:<br> <a href="" onclick="window.open('http://zone.ni.com/devzone/jsp/largeImage.jsp?imagename=/cms/images/devzone/tut/c/3d578304173.gif&language=en','awindow','scrollbars=yes, resizable=yes');return false;"><img src="/cms/images/devzone/tut/c/3d578304173.gif" width="525" border="0"></a><br><a href="" onclick="window.open('http://zone.ni.com/devzone/jsp/largeImage.jsp?imagename=/cms/images/devzone/tut/c/3d578304173.gif&language=en','awindow','scrollbars=yes,resizable=yes');return false;">[+] Enlarge Image</a> <br>
+				
+
+<div class="noindex">
+				<div class="docdetails">
+
+				
+	                  
+	                  
+				
+				
+
+
+
+<div class="ratings">2 ratings | <strong>5.00</strong> out of 5</div>
+
+
+
+				<a href="http://zone.ni.com/nirss/nirssnews?nistype=rss&q=url:http://zone.ni.com/devzone/cda/tut/p/id/2734&filter=%2Btaxonomy:%22Developer%20Zone%22&sortby=default&sortorder=ascending&nresults=1"><img src="/images/icons/us/rss.gif" width="30" height="16" alt="" border="0" class="middlealign"></a> | <a href="javascript:window.print()"><img src="/images/global/us/icons/print.gif" width="18" height="13" alt="" border="0" class="bottomalign"> Print Document</a> 
+									
+
+				</div>
+</div>
+
+				
+
+				
+	                  
+	                  
+	                  
+	                  
+	                  
+	                  
+	                  
+				
+				
+
+
+
+
+
+
+<h3>Reader Comments | <a href="http://zone.ni.com/apps/utf8/nidz_display_comments.create_comment?p_title=Converting+Visual+Basic+ActiveX+Examples+to+Equivalent+LabVIEW&p_doc_id=3D578304D756D010VGNVCM200000A90AA482RCRD&p_doc_type=TUT&p_url=http://zone.ni.com/devzone/cda/tut/p/id/2734&p_doc_url_id=2734">Submit a comment</a> <span class="cta">&raquo;</span></h3>
+<p>
+
+</p>
+<div class="dottedline">&nbsp;</div>
+
+
+
+<div class="noindex">
+				
+				<div class="legalnotice"><p><strong>Legal</strong><br />This tutorial (this "tutorial") was developed by National Instruments ("NI"). Although technical support of this tutorial may be made available by National Instruments, the content in this tutorial may not be completely tested and verified, and NI does not guarantee its quality in any way or that NI will continue to support this content with each new revision of related products and drivers.  THIS TUTORIAL IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND AND SUBJECT TO CERTAIN RESTRICTIONS AS MORE SPECIFICALLY SET FORTH IN NI.COM'S TERMS OF USE (<a href="http://ni.com/legal/termsofuse/unitedstates/us/">http://ni.com/legal/termsofuse/unitedstates/us/</a>).</p></div>
+				
+				
+
+			</div>	
+		</div>
+	</div>
+<div class="noindex"> <div class="clearfloat">&nbsp;</div> </div>
+	</div>
+
+<div class="noindex">
+
+
+
+
+					</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="clearfloat">&nbsp;</div>
+	</div>
+	<div id="footer" class="noindex">
+		<a href="http://www.ni.com/profile/">My Profile</a> | <a href="http://www.ni.com/legal/privacy/unitedstates/us/">Privacy</a> | <a href="http://www.ni.com/legal/">Legal</a> | <a href="http://sine.ni.com/apps/utf8/nicc.call_me">Contact NI</a> <span class="copyright">&copy; 2006 National Instruments Corporation.  All rights reserved.</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.ni.com/cgi-bin/mail_me.cgi"><img src="/images/global/us/email.gif" width="16" height="11" border="0" alt="E-Mail this Page"></a>&nbsp;<a href="http://www.ni.com/cgi-bin/mail_me.cgi" class="fineprint" style="vertical-align:top;">E-Mail this Page</a>
+	</div>
+</div>
+<script language="JavaScript" src="/javascript/analysis/us/tag-footer.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
+

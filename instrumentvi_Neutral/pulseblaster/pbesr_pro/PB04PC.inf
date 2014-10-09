@@ -1,0 +1,76 @@
+[Version]
+Signature="$Chicago$"
+Class=Multifunction
+;ClassGUID={c671678c-82c1-43f3-d700-0049433e9a4b}
+Provider="SpinCore Technologies, Inc."
+DriverVer=06/24/2004
+
+[SourceDisksNames]
+1="SpinCore Installation Disk",,0
+
+[SourceDisksFiles]
+wdpnp.sys	= 1
+windrvr.sys	= 1
+windrvr.vxd	= 1
+PB04PC.dll	= 1
+
+[DestinationDirs]
+DefaultDestDir		= 12
+WinDrvSys.Copy		= 12		; dirid = \Drivers on WinNT platforms
+WinDrvVXD.Copy		= 11,Vmm32
+SpinCoreDLL.Copy	= 11		; dirid = \system32 (system) on WinNT (Win) platforms
+
+[PB04PC]
+Log_Config	= Base1
+Copyfiles	= WinDrvSys.Copy, WinDrvVXD.Copy, SpinCoreDLL.Copy
+
+[WinDrvSys.Copy]
+wdpnp.sys
+windrvr.sys
+
+[WinDrvVXD.Copy]
+windrvr.vxd
+
+[SpinCoreDLL.Copy]
+PB04PC.dll
+
+[Manufacturer]
+"SpinCore Technologies, Inc."=mfgsec
+
+[mfgsec]
+; The Vendor ID is 10e8, and the Device ID is 8875
+%PB04PC%=PB04PC, PCI\VEN_10e8&DEV_8875
+
+[Base1]
+IRQConfig=3,4,5,7,9,10,11,14,15
+
+[ClassInstall32]
+Addreg=JungoClassReg
+
+[PB04PC.Services]
+Addservice = wdpnp, 0x00000002, PB04PC.Addservice
+
+[PB04PC.AddService]
+DisplayName    = %usb.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\wdpnp.sys
+
+[JungoClassReg]
+HKR,,,,Jungo
+HKR,,Icon,,-5
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,wdpnp.sys
+
+[PB04PC.Files.Ext]
+wdpnp.sys
+windrvr.sys
+windrvr.vxd
+PB04PC.dll
+
+[ControlFlags]
+
+[Strings]
+PB04PC="PulseBlaster PB04PC"
+usb.SvcDesc="WinDriver PNP Client"

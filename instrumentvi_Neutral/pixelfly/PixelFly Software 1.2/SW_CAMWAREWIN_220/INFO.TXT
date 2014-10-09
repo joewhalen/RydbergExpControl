@@ -1,0 +1,58 @@
+Welcome to the new Camera Control Program "CamWare" from PCO.
+
+PLEASE READ!! IMPORTANT INFORMATION!!!
+Especially the accellerator keys.
+
+CamWare is designed for applications, where common features are
+required. It is compatibel with all PCO digital cameras especially
+"pco.camera, SensiCam, DiCam Pro, PixelFly and HSFC"
+
+Some new features are implemented in the new version:
+
+- Default file format changed to 'multi'-TIFF.
+
+- Additonal color conversion algorythms (RGB16!).
+
+- Export to AVI and MPEG added.
+
+- Enhanced direct record to file with all pco cameras (single camera).
+
+- Logfiles. If you run into trouble you are able to generate logfiles,
+  which will aid you and our support to get faster in trouble shooting.
+  Additionally you will be enabled to create and send a 'support' file
+  by email. This feature can be reached inside the about box.
+
+- The convert control dialog has full gamma support, now. (You can control
+  the gamma setting by pressing and holding down the right mouse button
+  inside the red square of the dialog.)
+
+- Too less memory available with your PixelFly and SensiCam? Try to start
+  with the following registry key set to 1:
+  HKCU/SoftWare/PCO/CamWare/DummyAllocRun
+  This commits memory at the 'preferred load address' of dlls. Those dlls
+  will be positioned by the OS in an optimal way, which reduces memory
+  fragmentation. 
+  If you run into memory trouble, please reduce DummyAllocLimitation.
+
+Some menu items have been adapted in order to be more 'Windows'structured.
+
+A few menu items can be accessed through accellerator keys.
+
+- You can control the minimum and the maximum values used for the 
+  conversion from 12 to 8 bit with the mouse. Move the mouse cursor 
+  into a region which should be shown with maximum contrast. Press the
+  shift and the left mouse button. Hold down the mouse button while 
+  increasing the size of the rubberband window with mouse moves.
+  After releasing of the mouse button the coordinates of the rubberband
+  window act as a border for calculating the min. and max. values.
+
+- In the same manner you can define a new region of interest for the
+  camera. Just press the CTRL (Strg) button instead of
+  the shift button. The coordinates of the rubberband window are
+  used for calculating a new region of interest.
+  You can reset the ROI to maximum by pressing the CTRL (Strg) button
+  and clicking the right mouse button inside the image window.
+
+
+This information can be found in the file 'info.txt' located 
+in the application directory of 'CamWare.exe'.

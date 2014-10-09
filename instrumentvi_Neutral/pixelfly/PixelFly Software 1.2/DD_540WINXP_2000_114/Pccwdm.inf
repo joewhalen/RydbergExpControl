@@ -1,0 +1,180 @@
+;; Pccwdm.inf
+
+; Installation for the PixelFly(R) PCI540 adapter.
+;
+; (c) Copyright 2000 - 2006 PCO - AG
+;
+
+
+;--------- Version Section ---------------------------------------------------
+
+[Version]
+Signature="$Chicago$"
+Provider=%ProviderName%
+
+; If device fits one of the standard classes, use the name and GUID here,
+; otherwise create your own device class and GUID as this example shows.
+
+Class=PCO_Cameras
+ClassGUID={FCA83592-282C-4ef2-BDB6-0C332BCF9F03}
+DriverVer=11/20/2006,%Version%
+Version=%Version%
+
+;--------- SourceDiskNames and SourceDiskFiles Section -----------------------
+
+; These sections identify source disks and files for installation.  They are
+; shown here as an example, but commented out.
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+pccwdm.sys = 1,,
+pccwdm_2k.sys = 1,,
+pccam.dll = 1,,
+pccamvb.dll = 1,,
+pco_ci2.dll = 1,,
+pccamz.vxd = 1,,
+
+;--------- ClassInstall/ClassInstall32 Section -------------------------------
+
+; 9X Style
+[ClassInstall]
+CopyFiles=PCO_Class_Files
+Addreg=Class_AddReg
+
+; NT Style
+[ClassInstall32]
+CopyFiles=PCO_Class_Files
+Addreg=Class_AddReg
+
+[Class_AddReg]
+HKR,,,,%DeviceClassName%
+HKR,,Installer32,,"pco_ci2.dll,ClassInstaller"
+HKR,,Icon,,"101"
+
+
+[PCO_Class_Files]
+pco_ci2.dll
+
+
+;--------- DestinationDirs Section -------------------------------------------
+
+[DestinationDirs]
+DefaultDestDir   = 11
+Pccwdm_XP_Driver = 12
+Pccwdm_2k_Driver =12
+PcCam.DllsNT = 11
+PcCam.W95 = 11
+Pccam_Files_Driver = 12
+
+;--------- Manufacturer and Models Sections ----------------------------------
+
+[Manufacturer]
+%MfgName%=PCO.Mfg,NTx86.5.1
+
+[PCO.Mfg]
+%DeviceDesc%=Pccwdm_DDI, PCI\VEN_10E8&DEV_82ED&SUBSYS_00000000&REV_01
+
+[PCO.Mfg.NTx86.5.1]
+%DeviceDesc_XP%=Pccwdm_DDI_XP, PCI\VEN_10E8&DEV_82ED&SUBSYS_00000000&REV_01
+
+
+;---------- DDInstall Sections -----------------------------------------------
+; --------- Windows 9X -----------------
+
+;pccwdm.sys is not running in W95
+[Pccwdm_DDI]
+
+; --------- Windows 2000 -----------------
+
+[Pccwdm_DDI.NTx86]
+CopyFiles=Pccwdm_2k_Driver,PcCam.DllsNT
+DelFiles=Pccam_Files_Driver
+DelFiles=Pccwdm_XP_Driver
+DelReg=Pccwdm_NT_DElReg
+DelReg=Pccam_NT_DElReg
+AddReg=Pccwdm_NT_AddReg
+
+[Pccwdm_DDI.NTx86.Services]
+DelService=pccam,0x00000204
+Addservice = Pccwdm, 0x00000002, Pccwdm_AddService
+
+[Pccwdm_AddService]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\Pccwdm_2k.sys
+
+[Pccwdm_NT_AddReg]
+HKLM,%drvkey%\Parameters,"BreakOnEntry", 0x00010001, 0
+HKLM,%drvkey%\Parameters,"Startlog", 0x00010001, 0
+HKLM,%drvkey%\Parameters,"Logfile",,%10%%log%
+
+
+[Pccwdm_NT_DelReg]
+HKLM,%drvkey%\Parameters,"BreakOnEntry",
+HKLM,%drvkey%\Parameters,"Startlog",
+HKLM,%drvkey%\Parameters,"Logfile",
+
+[Pccam_NT_DelReg]
+HKLM,%oldkey%\Parameters,"Startlog",
+HKLM,%oldkey%\Parameters,"Logfile",
+
+; --------- Windows XP -----------------
+
+[Pccwdm_DDI_XP.NTx86]
+CopyFiles=Pccwdm_XP_Driver,PcCam.DllsNT
+DelFiles=Pccam_Files_Driver
+DelReg=Pccwdm_NT_DElReg
+DelReg=Pccam_NT_DElReg
+AddReg=Pccwdm_NT_AddReg
+
+[Pccwdm_DDI_XP.NTx86.Services]
+DelService=pccam,0x00000204
+Addservice = Pccwdm, 0x00000002, Pccwdm_AddService_XP
+
+[Pccwdm_AddService_XP]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\Pccwdm.sys
+
+
+; --------- Files (common) -------------
+
+[PcCam.W95]
+pccamz.vxd
+pccam.dll
+pccamvb.dll
+
+[Pccwdm_2k_Driver]
+Pccwdm_2k.sys
+
+[Pccwdm_XP_Driver]
+Pccwdm.sys
+
+[PcCam.DllsNT]
+pccam.dll
+pccamvb.dll
+
+[Pccam_Files_Driver]
+Pccam.sys
+
+;--------- Strings Section ---------------------------------------------------
+
+[Strings]
+ProviderName="PCO AG"
+MfgName="PCO AG"
+DeviceDesc="PCO PCI540 WDM "
+DeviceDesc_XP="PCO PCI540 WDM XP "
+DeviceClassName="PCO cameras"
+SvcDesc="PCO PCI540 pccwdm"
+log = "\pcc_drv.log"
+DiskId1 = "PCO AG - Installation Disk #1 (Media)"
+drvkey = "System\CurrentControlSet\Services\pccwdm"
+oldkey = "System\CurrentControlSet\Services\pccam"
+Version = 1.0.0.14
+

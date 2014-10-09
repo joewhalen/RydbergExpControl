@@ -1,0 +1,8 @@
+liba.dll
+_libaInitialize		_libaInitialize
+_libaInitializeWithHandlers		_libaInitializeWithHandlers
+_libaTerminate		_libaTerminate
+_mlfGaussfitfunctionerrorsslope		_mlfGaussfitfunctionerrorsslope
+_mlfNlinfit		_mlfNlinfit
+_mlxGaussfitfunctionerrorsslope		_mlxGaussfitfunctionerrorsslope
+_mlxNlinfit		_mlxNlinfit

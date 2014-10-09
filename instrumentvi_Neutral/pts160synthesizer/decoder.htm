@@ -1,0 +1,1497 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>decoder</title>
+</head>
+
+<body background="Graphics/800b.jpg" bgcolor="#000000"
+text="#00FFFF" link="#FF0000" vlink="#00FF00" alink="#FF00FF">
+
+<p align="center"><font color="#FF0000" size="7"><em><strong><u>More
+Strobe Lines !</u></strong></em></font></p>
+
+<hr>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>After the
+8 data lines are hooked up there are only 4 more output lines
+available to be used as strobe lines. Although this is enough to
+control some PTS symthesizers, you will need more lines for some
+other models or if you intend to control multiple PTS units.
+There are several options to generate more strobe lines.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>1 -
+Install another printer port.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>2 - Use an
+address decoder to expand the 4 lines that are available.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>I used an
+address decoder as I wanted to save the other printer ports for
+controlling other devices.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>Using the
+remaining 4 output lines a 7442 can be used to generate 9 strobe
+lines. This is enough to control two PTS-160 or a PTS-500 and a
+PTS160.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>A 4515
+CMOS / 74154 TTL device can be used to generate 15 strobe lines.
+This can control 3 PTS-500, 3 PTS-160 or any combination of
+these.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>The 7442
+appears to be more readily found in the junk box but if you are
+buying your decoder chip new look for the CD4515 / MC14515. The
+4515 is NOT an expensive chip. Many suppliers sell this chip for
+as low as $0.25 each.</strong></font></p>
+
+<p align="left"><font color="#00FFFF" size="3"><strong>+5 vdc to
+power the decoder is available on Pin 48 of the parallel remote
+plug on the back of the PTS synthesizer.</strong></font></p>
+
+<hr>
+
+<p align="center"><font color="#FF8000" size="4"><strong><u>7442
+TTL<br>
+1-of-10 inverting decoder/demultiplexer</u></strong></font></p>
+
+<p align="center"><font color="#00FFFF" size="4">This will
+generate 9 strobe lines from 4 address lines.<br>
+</font><font color="#FFFF00" size="2"><strong>S0</strong></font><font
+color="#00FFFF" size="2"><strong>,</strong></font><font
+color="#FFFF00" size="2"><strong>S1</strong></font><font
+color="#00FFFF" size="2"><strong>,</strong></font><font
+color="#FFFF00" size="2"><strong>S2</strong></font><font
+color="#00FFFF" size="2"><strong>,and </strong></font><font
+color="#FFFF00" size="2"><strong>S3</strong></font><font
+color="#00FFFF" size="2"><strong> go to the 4 output lines from
+the computer.<br>
+</strong></font><font color="#00FF00" size="2"><strong>/Y1</strong></font><font
+color="#00FFFF" size="2"><strong> through </strong></font><font
+color="#00FF00" size="2"><strong>/Y9</strong></font><font
+color="#00FFFF" size="2"><strong> are the 9 strobe lines to the
+PTS.<br>
+</strong></font><font color="#00FF00" size="2"><strong>/Y0</strong></font><font
+color="#00FFFF" size="2"><strong> is reserved for the 'OFF'
+state.<br>
+</strong></font><font color="#FF0000" size="4"><em><strong><u>This
+chart has NOT been verified!</u></strong></em></font></p>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td><div align="left"><pre><strong>    +----------+
+</strong><font color="#00FF00"><strong>/Y0</strong></font><strong> |</strong><font
+color="#FF0000"><strong>1 </strong></font><strong>      </strong><font
+color="#FF0000"><strong>16</strong></font><strong>| VCC 
+</strong><font color="#00FF00"><strong>/Y1</strong></font><strong> |</strong><font
+color="#FF0000"><strong>2</strong></font><strong>       </strong><font
+color="#FF0000"><strong>15</strong></font><strong>| </strong><font
+color="#FFFF00"><strong>S0</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y2</strong></font><strong> |</strong><font
+color="#FF0000"><strong>3</strong></font><strong>       </strong><font
+color="#FF0000"><strong>14</strong></font><strong>| </strong><font
+color="#FFFF00"><strong>S1</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y3</strong></font><strong> |</strong><font
+color="#FF0000"><strong>4</strong></font><strong>      </strong><font
+color="#FF0000"><strong> 13</strong></font><strong>| </strong><font
+color="#FFFF00"><strong>S2</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y4</strong></font><strong> |</strong><font
+color="#FF0000"><strong>5</strong></font><strong>  </strong><font
+color="#FF8000"><strong>7442</strong></font><strong> </strong><font
+color="#FF0000"><strong>12</strong></font><strong>| </strong><font
+color="#FFFF00"><strong>S3</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y5</strong></font><strong> |</strong><font
+color="#FF0000"><strong>6</strong></font><strong>       </strong><font
+color="#FF0000"><strong>11</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y9</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y6</strong></font><strong> |</strong><font
+color="#FF0000"><strong>7</strong></font><strong>     </strong><font
+color="#FF0000"><strong>  10</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y8</strong></font><strong> 
+GND |</strong><font color="#FF0000"><strong>8  </strong></font><strong>   </strong><font
+color="#FF0000"><strong>   9</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y7</strong></font><strong> 
+    +----------+</strong>
+</pre>
+        </div></td>
+        <td><table border="1" cellspacing="1">
+            <tr>
+                <td>&nbsp;</td>
+                <td><font color="#FFFF00"><strong>S3</strong></font></td>
+                <td><font color="#FFFF00"><strong>S2</strong></font></td>
+                <td><font color="#FFFF00"><strong>S1</strong></font></td>
+                <td><font color="#FFFF00"><strong>S0</strong></font></td>
+                <td>&nbsp;</td>
+                <td><font color="#00FF00"><strong>/Y0</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y1</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y2</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y3</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y4</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y5</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y6</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y7</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y8</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y9</strong></font></td>
+            </tr>
+            <tr>
+                <td><strong>Pin</strong></td>
+                <td><font color="#FF0000"><strong>12</strong></font></td>
+                <td><font color="#FF0000"><strong>13</strong></font></td>
+                <td><font color="#FF0000"><strong>14</strong></font></td>
+                <td><font color="#FF0000"><strong>15</strong></font></td>
+                <td>&nbsp;</td>
+                <td><font color="#FF0000"><strong>1</strong></font></td>
+                <td><font color="#FF0000"><strong>2</strong></font></td>
+                <td><font color="#FF0000"><strong>3</strong></font></td>
+                <td><font color="#FF0000"><strong>4</strong></font></td>
+                <td><font color="#FF0000"><strong>5</strong></font></td>
+                <td><font color="#FF0000"><strong>6</strong></font></td>
+                <td><font color="#FF0000"><strong>7</strong></font></td>
+                <td><font color="#FF0000"><strong>9</strong></font></td>
+                <td><font color="#FF0000"><strong>10</strong></font></td>
+                <td><font color="#FF0000"><strong>11</strong></font></td>
+            </tr>
+            <tr>
+                <td><strong>Dec</strong></td>
+                <td><strong>8</strong></td>
+                <td><strong>4</strong></td>
+                <td><strong>2</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>2</strong></td>
+                <td><strong>3</strong></td>
+                <td><strong>4</strong></td>
+                <td><strong>5</strong></td>
+                <td><strong>6</strong></td>
+                <td><strong>7</strong></td>
+                <td><strong>8</strong></td>
+                <td><strong>9</strong></td>
+            </tr>
+            <tr>
+                <td>Hex</td>
+                <td>08</td>
+                <td>04</td>
+                <td>02</td>
+                <td>01</td>
+                <td>&nbsp;</td>
+                <td>00</td>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+                <td>05</td>
+                <td>06</td>
+                <td>07</td>
+                <td>08</td>
+                <td>09</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</center></div>
+
+<hr>
+<div align="center"><center>
+
+<pre><font color="#FF8000" size="4" face="Times New Roman"><strong>CD4515, MC14515, CMOS
+1-of-16 inverting decoder/demultiplexer with address latches.</strong></font></pre>
+</center></div><div align="center"><center>
+
+<pre><font color="#00FFFF" size="4" face="Times New Roman"><strong>This will generate 15 strobe lines from 4 address lines.
+</strong></font><font color="#FFFF00" size="2"><strong>S0</strong></font><font
+color="#00FFFF" size="2"><strong>,</strong></font><font
+color="#FFFF00" size="2"><strong>S1</strong></font><font
+color="#00FFFF" size="2"><strong>,</strong></font><font
+color="#FFFF00" size="2"><strong>S2</strong></font><font
+color="#00FFFF" size="2"><strong>,and </strong></font><font
+color="#FFFF00" size="2"><strong>S3</strong></font><font
+color="#00FFFF" size="2"><strong> go to the 4 output lines from the computer.
+</strong></font><font color="#00FF00" size="2"><strong>/Y1</strong></font><font
+color="#00FFFF" size="2"><strong> through </strong></font><font
+color="#00FF00" size="2"><strong>/Y15</strong></font><font
+color="#00FFFF" size="2"><strong> are the 15 strobe lines to the PTS.
+</strong></font><font color="#00FF00" size="2"><strong>/Y0 </strong></font><font
+color="#00FFFF" size="2"><strong>is reserved for the 'OFF' state
+Note: Pin 23 /EN must be grounded to enable the chip!
+Pin 1 LE should be tied to (high) VCC at pin 24.
+</strong></font><font color="#FF0000" size="5"
+face="Times New Roman"><em><strong><u>This chart has been verified!</u></strong></em></font></pre>
+</center></div><div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td><pre><strong>    +----------+
+ LE |</strong><font color="#FF0000"><strong>1       24</strong></font><strong>| VCC  
+ </strong><font color="#FFFF00"><strong>S0</strong></font><strong> |</strong><font
+color="#FF0000"><strong>2       23</strong></font><strong>| /EN  
+</strong><font color="#FFFF00"><strong> S1 </strong></font><strong>|</strong><font
+color="#FF0000"><strong>3       22</strong></font><strong>|</strong><font
+color="#FFFF00"><strong> S3 </strong></font><strong>  
+</strong><font color="#00FF00"><strong>/Y7</strong></font><strong> |</strong><font
+color="#FF0000"><strong>4       21</strong></font><strong>| </strong><font
+color="#FFFF00"><strong>S2</strong></font><strong>   
+</strong><font color="#00FF00"><strong>/Y6</strong></font><strong> |</strong><font
+color="#FF0000"><strong>5       20</strong></font><strong>|</strong><font
+color="#00FF00"><strong> /Y10</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y5</strong></font><strong> |</strong><font
+color="#FF0000"><strong>6       19</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y11</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y4</strong></font><strong> |</strong><font
+color="#FF0000"><strong>7</strong></font><strong>  </strong><font
+color="#FF8000"><strong>4515</strong></font><strong> </strong><font
+color="#FF0000"><strong>18</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y8</strong></font><strong>  
+</strong><font color="#00FF00"><strong>/Y3</strong></font><strong> |</strong><font
+color="#FF0000"><strong>8       17</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y9</strong></font><strong>  
+</strong><font color="#00FF00"><strong>/Y1</strong></font><strong> |</strong><font
+color="#FF0000"><strong>9       16</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y15</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y2</strong></font><strong> |</strong><font
+color="#FF0000"><strong>10      15</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y14</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y0</strong></font><strong> |</strong><font
+color="#FF0000"><strong>11      14</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y12</strong></font><strong> 
+GND |</strong><font color="#FF0000"><strong>12      13</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y13</strong></font><strong> 
+    +----------+</strong></pre>
+        </td>
+        <td><table border="1" cellspacing="1">
+            <tr>
+                <td>&nbsp;</td>
+                <td><font color="#FFFF00"><strong>S3</strong></font></td>
+                <td><font color="#FFFF00"><strong>S2</strong></font></td>
+                <td><font color="#FFFF00"><strong>S1</strong></font></td>
+                <td><font color="#FFFF00"><strong>S0</strong></font></td>
+                <td>&nbsp;</td>
+                <td><font color="#00FF00"><strong>/Y0</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y1</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y2</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y3</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y4</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y5</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y6</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y7</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y8</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y9</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y10</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y11</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y12</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y13</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y14</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y15</strong></font></td>
+            </tr>
+            <tr>
+                <td><strong>Pin</strong></td>
+                <td><font color="#FF0000"><strong>22</strong></font></td>
+                <td><font color="#FF0000"><strong>21</strong></font></td>
+                <td><font color="#FF0000"><strong>3</strong></font></td>
+                <td><font color="#FF0000"><strong>2</strong></font></td>
+                <td>&nbsp;</td>
+                <td><font color="#FF0000"><strong>11</strong></font></td>
+                <td><font color="#FF0000"><strong>9</strong></font></td>
+                <td><font color="#FF0000"><strong>10</strong></font></td>
+                <td><font color="#FF0000"><strong>8</strong></font></td>
+                <td><font color="#FF0000"><strong>7</strong></font></td>
+                <td><font color="#FF0000"><strong>6</strong></font></td>
+                <td><font color="#FF0000"><strong>5</strong></font></td>
+                <td><font color="#FF0000"><strong>4</strong></font></td>
+                <td><font color="#FF0000"><strong>18</strong></font></td>
+                <td><font color="#FF0000"><strong>17</strong></font></td>
+                <td><font color="#FF0000"><strong>20</strong></font></td>
+                <td><font color="#FF0000"><strong>19</strong></font></td>
+                <td><font color="#FF0000"><strong>14</strong></font></td>
+                <td><font color="#FF0000"><strong>13</strong></font></td>
+                <td><font color="#FF0000"><strong>15</strong></font></td>
+                <td><font color="#FF0000"><strong>16</strong></font></td>
+            </tr>
+            <tr>
+                <td><strong>Dec</strong></td>
+                <td><strong>8</strong></td>
+                <td><strong>4</strong></td>
+                <td><strong>2</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>2</strong></td>
+                <td><strong>3</strong></td>
+                <td><strong>4</strong></td>
+                <td><strong>5</strong></td>
+                <td><strong>6</strong></td>
+                <td><strong>7</strong></td>
+                <td><strong>8</strong></td>
+                <td><strong>9</strong></td>
+                <td><strong>10</strong></td>
+                <td><strong>11</strong></td>
+                <td><strong>12</strong></td>
+                <td><strong>13</strong></td>
+                <td><strong>14</strong></td>
+                <td><strong>15</strong></td>
+            </tr>
+            <tr>
+                <td>Hex</td>
+                <td>08</td>
+                <td>04</td>
+                <td>02</td>
+                <td>01</td>
+                <td>&nbsp;</td>
+                <td>00</td>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+                <td>05</td>
+                <td>06</td>
+                <td>07</td>
+                <td>08</td>
+                <td>09</td>
+                <td>0A</td>
+                <td>0B</td>
+                <td>0C</td>
+                <td>0D</td>
+                <td>0E</td>
+                <td>0F</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</center></div>
+
+<hr>
+
+<p align="center"><font color="#FF8000" size="5"><strong>74154</strong></font></p>
+
+<p align="center"><font color="#00FFFF" size="4"
+face="Times New Roman"><strong>This will generate 15 strobe lines
+from 4 address lines.<br>
+</strong></font><font color="#FFFF00" size="2"><strong>A</strong></font><font
+color="#00FFFF" size="2"><strong>,</strong></font><font
+color="#FFFF00" size="2"><strong>B</strong></font><font
+color="#00FFFF" size="2"><strong>,</strong></font><font
+color="#FFFF00" size="2"><strong>C</strong></font><font
+color="#00FFFF" size="2"><strong>,and </strong></font><font
+color="#FFFF00" size="2"><strong>D</strong></font><font
+color="#00FFFF" size="2"><strong> go to the 4 output lines from
+the computer.<br>
+</strong></font><font color="#00FF00" size="2"><strong>/Y1</strong></font><font
+color="#00FFFF" size="2"><strong> through </strong></font><font
+color="#00FF00" size="2"><strong>/Y15</strong></font><font
+color="#00FFFF" size="2"><strong> are the 15 strobe lines to the
+PTS.<br>
+</strong></font><font color="#00FF00" size="2"><strong>/Y0 </strong></font><font
+color="#00FFFF" size="2"><strong>is reserved for the 'OFF' state.<br>
+</strong></font><font color="#FF0000" size="4"><em><strong><u>This
+chart has NOT been verified!</u></strong></em></font></p>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td><pre><strong>    +----------+
+</strong><font color="#00FF00"><strong>/Y0 </strong></font><strong>|</strong><font
+color="#FF0000"><strong>1       24</strong></font><strong>| VCC  
+</strong><font color="#00FF00"><strong>/Y1</strong></font><strong> |</strong><font
+color="#FF0000"><strong>2       23</strong></font><strong>|  </strong><font
+color="#FFFF00"><strong>A</strong></font><strong>   
+</strong><font color="#00FF00"><strong>/Y2</strong></font><font
+color="#FFFF00"><strong> </strong></font><strong>|</strong><font
+color="#FF0000"><strong>3       22</strong></font><strong>|</strong><font
+color="#FFFF00"><strong>  B </strong></font><strong>  
+</strong><font color="#00FF00"><strong>/Y3</strong></font><strong> |</strong><font
+color="#FF0000"><strong>4       21</strong></font><strong>| </strong><font
+color="#FFFF00"><strong> C</strong></font><strong>   
+</strong><font color="#00FF00"><strong>/Y4</strong></font><strong> |</strong><font
+color="#FF0000"><strong>5       20</strong></font><strong>|</strong><font
+color="#00FF00"><strong> </strong></font><font color="#FFFF00"><strong> D</strong></font><font
+color="#00FF00"><strong> </strong></font><strong>  
+</strong><font color="#00FF00"><strong>/Y5</strong></font><strong> |</strong><font
+color="#FF0000"><strong>6       19</strong></font><strong>| </strong><font
+color="#FF8000"><strong>/G2 </strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y6</strong></font><strong> |</strong><font
+color="#FF0000"><strong>7</strong></font><strong> </strong><font
+color="#FF8000"><strong>74154 </strong></font><font
+color="#FF0000"><strong>18</strong></font><strong>| </strong><font
+color="#FF8000"><strong>/G1 </strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y7</strong></font><strong> |</strong><font
+color="#FF0000"><strong>8       17</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y15</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y8</strong></font><strong> |</strong><font
+color="#FF0000"><strong>9       16</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y14</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y9</strong></font><strong> |</strong><font
+color="#FF0000"><strong>10      15</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y13</strong></font><strong> 
+</strong><font color="#00FF00"><strong>/Y10</strong></font><strong>|</strong><font
+color="#FF0000"><strong>11      14</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y12</strong></font><strong> 
+GND |</strong><font color="#FF0000"><strong>12      13</strong></font><strong>| </strong><font
+color="#00FF00"><strong>/Y11</strong></font><strong> 
+    +----------+</strong></pre>
+        <pre><strong>Ground G1 and G2
+to enable the chip !</strong></pre>
+        </td>
+        <td><table border="1" cellspacing="1">
+            <tr>
+                <td>&nbsp;</td>
+                <td><font color="#FFFF00"><strong>D</strong></font></td>
+                <td><font color="#FFFF00"><strong>C</strong></font></td>
+                <td><font color="#FFFF00"><strong>B</strong></font></td>
+                <td><font color="#FFFF00"><strong>A</strong></font></td>
+                <td>&nbsp;</td>
+                <td><font color="#00FF00"><strong>/Y0</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y1</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y2</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y3</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y4</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y5</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y6</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y7</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y8</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y9</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y10</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y11</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y12</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y13</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y14</strong></font></td>
+                <td><font color="#00FF00"><strong>/Y15</strong></font></td>
+            </tr>
+            <tr>
+                <td><strong>Pin</strong></td>
+                <td><font color="#FF0000"><strong>20</strong></font></td>
+                <td><font color="#FF0000"><strong>21</strong></font></td>
+                <td><font color="#FF0000"><strong>22</strong></font></td>
+                <td><font color="#FF0000"><strong>23</strong></font></td>
+                <td>&nbsp;</td>
+                <td><font color="#FF0000"><strong>1</strong></font></td>
+                <td><font color="#FF0000"><strong>2</strong></font></td>
+                <td><font color="#FF0000"><strong>3</strong></font></td>
+                <td><font color="#FF0000"><strong>4</strong></font></td>
+                <td><font color="#FF0000"><strong>5</strong></font></td>
+                <td><font color="#FF0000"><strong>6</strong></font></td>
+                <td><font color="#FF0000"><strong>7</strong></font></td>
+                <td><font color="#FF0000"><strong>8</strong></font></td>
+                <td><font color="#FF0000"><strong>9</strong></font></td>
+                <td><font color="#FF0000"><strong>10</strong></font></td>
+                <td><font color="#FF0000"><strong>11</strong></font></td>
+                <td><font color="#FF0000"><strong>13</strong></font></td>
+                <td><font color="#FF0000"><strong>14</strong></font></td>
+                <td><font color="#FF0000"><strong>15</strong></font></td>
+                <td><font color="#FF0000"><strong>16</strong></font></td>
+                <td><font color="#FF0000"><strong>17</strong></font></td>
+            </tr>
+            <tr>
+                <td><strong>Dec</strong></td>
+                <td><strong>8</strong></td>
+                <td><strong>4</strong></td>
+                <td><strong>2</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>2</strong></td>
+                <td><strong>3</strong></td>
+                <td><strong>4</strong></td>
+                <td><strong>5</strong></td>
+                <td><strong>6</strong></td>
+                <td><strong>7</strong></td>
+                <td><strong>8</strong></td>
+                <td><strong>9</strong></td>
+                <td><strong>10</strong></td>
+                <td><strong>11</strong></td>
+                <td><strong>12</strong></td>
+                <td><strong>13</strong></td>
+                <td><strong>14</strong></td>
+                <td><strong>15</strong></td>
+            </tr>
+            <tr>
+                <td>Hex</td>
+                <td>08</td>
+                <td>04</td>
+                <td>02</td>
+                <td>01</td>
+                <td>&nbsp;</td>
+                <td>00</td>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+                <td>05</td>
+                <td>06</td>
+                <td>07</td>
+                <td>08</td>
+                <td>09</td>
+                <td>0A</td>
+                <td>0B</td>
+                <td>0C</td>
+                <td>0D</td>
+                <td>0E</td>
+                <td>0F</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+                <td><strong>1</strong></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>1</strong></td>
+                <td><strong>0</strong></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</center></div>
+
+<hr>
+
+<p><a href="pts160.htm"><font color="#FF0000" size="5"><strong>&lt;Back</strong></font></a></p>
+</body>
+</html>

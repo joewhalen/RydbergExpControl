@@ -1,0 +1,9 @@
+Sub-VI's or functions that CANNOT be used in RedMOTimagepulseblastR9 on Magnesium:
+Updated 2005/03/24
+
+- Anything to do with the Roper camera
+- The SRS DS345 (arbitrary waveform) unless you bring over the SRS.
+	(I have not yet tested it on this system)
+- the NI 6025 card. it does not exist in our system.  I've disabled everything related to it that I could find, but in case I missed anything, disable it.
+- DIO channel 4 and 7 do not work for the 6733, and DIO channel 4 does not work for the 
+6713.

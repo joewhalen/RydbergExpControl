@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<lab>
+	<student>
+		<name>Joe</name>
+		<age>22</age>
+	</student>
+	<student>
+		<name>Jim</name>
+		<age>25</age>
+	</student>
+	<advisor>
+		<name>Tom</name>
+		<age>Inf.</age>
+		<test>
+			<subtest>1</subtest>
+		</test>
+	</advisor>
+</lab>

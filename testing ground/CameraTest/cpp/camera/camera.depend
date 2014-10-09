@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1405666898 source:c:\users\rydberg\desktop\joedesktopfiles\cameratest\cpp\camera\main.cpp
+	<iostream>
+	"ATMCD32D.H"
+
+1387326226 c:\users\rydberg\desktop\joedesktopfiles\cameratest\cpp\camera\atmcd32d.h
+	"windows.h"
+
+1387330724 source:c:\program files\andor solis\drivers 32bit\examples\c++\dualcameracontrol\dualcamera.cpp
+	"DualCamera.h"
+
+1387330724 c:\program files\andor solis\drivers 32bit\examples\c++\dualcameracontrol\dualcamera.h
+	<iostream>
+	"CImg.h"
+	"ATMCD32D.H"
+
+1387330724 c:\program files\andor solis\drivers 32bit\examples\c++\dualcameracontrol\cimg.h
+	<cstdio>
+	<cstdlib>
+	<cstdarg>
+	<cstring>
+	<cmath>
+	<ctime>
+	<exception>
+	<sys/types.h>
+	<sys/time.h>
+	<unistd.h>
+	<windows.h>
+	<shlobj.h>
+	<io.h>
+	<stdio.h>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/keysym.h>
+	<pthread.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<X11/extensions/XShm.h>
+	<X11/extensions/Xrandr.h>
+	"omp.h"
+	"cv.h"
+	"highgui.h"
+	"png.h"
+	"jpeglib.h"
+	"setjmp.h"
+	"tiffio.h"
+	"avformat.h"
+	"avcodec.h"
+	"swscale.h"
+	"zlib.h"
+	"Magick++.h"
+	"fftw3.h"
+	"Board.h"
+	"ImfRgbaFile.h"
+	"ImfInputFile.h"
+	"ImfChannelList.h"
+	"ImfMatrixAttribute.h"
+	"ImfArray.h"
+	"CImg.h"
+
+1387326226 c:\program files\andor solis\drivers 32bit\examples\c++\dualcameracontrol\atmcd32d.h
+	"windows.h"
+

@@ -1,0 +1,419 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <Inputs mems='6'>
+    <Active_Device type='String'>6733_Red_87</Active_Device>
+    <Active_Channels dim='[8]' type='Bool'>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+    </Active_Channels>
+    <Waveform_Parameters dim='[8,6]' type='Cluster'>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+      <Waveform_Parameters mems='6'>
+        <Functional_Form type='Enum U16' sel='Exponential'>1</Functional_Form>
+        <Start_Voltage type='DBL'>0</Start_Voltage>
+        <End_Voltage type='DBL'>0</End_Voltage>
+        <Time type='DBL'>0</Time>
+        <Degree type='I8'>1</Degree>
+        <Sample_Rate type='DBL'>0</Sample_Rate>
+      </Waveform_Parameters>
+    </Waveform_Parameters>
+    <Active_Phases dim='[6]' type='Bool'>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+      <Boolean>FALSE</Boolean>
+    </Active_Phases>
+    <Phase_Times dim='[6]' type='DBL'>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>3</Numeric>
+    </Phase_Times>
+    <Trigger_Channel type='Tag'>/6733_Red_87/PFI0</Trigger_Channel>
+  </Inputs>
+</GXML_Root>

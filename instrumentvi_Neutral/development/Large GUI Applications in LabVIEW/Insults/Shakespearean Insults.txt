@@ -1,0 +1,38 @@
+Shakespearean Insults
+
+   To make a Shakespearean insult, start with the word "Thou."  Add one word selected at random from each column.  For example, "Thou greasy, iron-witted rabbit-sucker!"
+
+Column A       Column B          Column C
+--------------------------------------------------------
+bawdy          bunch-backed      canker-blossom
+brazen         clay-brained      clot pole
+churlish       dog-hearted       crutch
+distempered    empty-hearted     cut purse
+fitful         evil-eyed         dogfish
+gnarling       eye-offending     egg-shell
+greasy         fat-kidneyed      gull-catcher
+grizzled       heavy-handed      hempseed
+haughty        horn-mad          hedge-pig
+hideous        ill-breeding      jack-a-nape
+jaded          ill-composed      malignancy
+knavish        ill-nurtured      malkin
+lewd           iron-witted       malt-worm
+peevish        lean-witted       manikin
+pernicious     lily-livered      minimus
+prating        mad-bred          miscreant
+purpled        motley-minded     moldwarp
+queasy         muddy-meddled     nut-hook
+rank           onion-eyed        pantaloon
+reeky          pale-hearted      rabbit-sucker
+roynish        paper-faced       rampallion
+sottish        pinch-spotted     remnant
+saucy          raw-boned         rudesby
+unmuzzled      rug-headed        ruffian
+vacant         rump-fed          scanting
+waggish        shag-eared        scullion
+wanton         shrill-gorged     snipe
+wenching       sour-faced        waterfly
+whoreson       weak-hinged       whipster
+yeasty         white-livered     younker
+
+Data from "Shakespearean Insults," Folger Library Shakespearean Education and Festivals Project, Jerry Maguire, Center Grove High School, Greenwood Indiana

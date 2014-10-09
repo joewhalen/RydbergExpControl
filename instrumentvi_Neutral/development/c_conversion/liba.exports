@@ -1,0 +1,7 @@
+libaInitialize
+libaInitializeWithHandlers
+libaTerminate
+mlxNlinfit
+mlfNlinfit
+mlxGaussfitfunctionerrorsslope
+mlfGaussfitfunctionerrorsslope

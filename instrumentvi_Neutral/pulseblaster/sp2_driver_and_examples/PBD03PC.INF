@@ -1,0 +1,96 @@
+; Installation file (.inf) for "PulseBlasterDDS PBD03PC" device
+; Copyright (c) 2003 SpinCore Technologies, Inc.
+;
+
+[Version]
+Signature="$CHICAGO$"  ; Represents all Windows OSs
+Class=Multifunction
+;ClassGuid={c671678c-82c1-43f3-d700-0049433e9a4b}
+Provider=%jun%
+DriverVer=01/16/2003, 5.2.2
+
+; Driver information
+; ------------------
+[Manufacturer]
+%Mfg%=DeviceList
+
+[DeviceList]
+; The Vendor ID is 10e8, and the Device ID is 8852
+"PulseBlasterDDS PBD03PC"=Install, PCI\VEN_10E8&DEV_8852&SUBSYS_00000000&REV_00
+
+; Installation section
+; --------------------
+[Install]  ; Installation script for Windows 98/Me
+CopyFiles=FilesToCopy
+AddReg=UpDateRegistry
+Log_Config=Base1
+
+[Base1]
+IRQConfig=3,4,5,7,9,10,11,14,15
+
+[Install.NT]  ; Installation script for Windows 2000/XP
+CopyFiles=FilesToCopy, SpinCoreDLL
+AddReg=UpDateRegistry
+
+[FilesToCopy]
+windrvr.sys ,,,0x40  ; 0x40 == COPYFLG_OVERWRITE_OLDER_ONLY
+
+[SpinCoreDLL]
+PBD03PC.dll ,,,0x40  ; 0x40 == COPYFLG_OVERWRITE_OLDER_ONLY
+
+[ClassInstall]  ; Register a new class in Windows 98/Me
+AddReg=UpDateRegistry
+
+[ClassInstall32]  ; Register a new class in Windows 2k/XP
+AddReg=UpDateRegistry
+
+[UpDateRegistry]
+HKR,,,,Jungo
+HKR,,Icon,,-5
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,, windrvr.sys
+
+[ControlFlags]
+ExcludeFromSelect = *  ; Remove all devices listed in this INF file
+    ; from the display shown to the end user (a PNP device shouldn't
+    ; be manually loaded).
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+; Defining WinDriver Service
+; ---------------------------
+[Install.NT.Services]
+Addservice=WinDriver, 0x00000002, Service_Info
+
+[Service_Info]
+DisplayName    = %Service_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\windrvr.sys
+
+; Source file information
+; -----------------------
+[SourceDisksFiles]
+windrvr.sys=1  ; This indicates that the windrvr.sys file is located on
+    ; disk number 1 of "SpinCore Technologies, Inc. Installation disks" set.
+
+[SourceDisksNames]
+1="SpinCore Technologies, Inc. Installation Disk",,  ; This indicates that disk number 1
+    ; has the label "SpinCore Technologies, Inc. Installation Disk". The installer will
+    ; search for windrvr.sys in this disk.
+
+[DestinationDirs]
+DefaultDestDir=10, System32\Drivers  ; The location to which the windrvr.sys
+    ; file will be copied (10 translates to the correct Windows directory
+    ; on the target machine).
+SpinCoreDLL=11
+
+;---------------------------------------------------------------;
+
+[Strings]
+jun="Jungo LTD."
+Service_Description="WinDriver Kernel Module"
+Mfg="SpinCore Technologies, Inc."
+
